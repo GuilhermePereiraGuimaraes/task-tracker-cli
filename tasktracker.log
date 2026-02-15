@@ -1,0 +1,34 @@
+1771190791276:exit
+1771190888322:task-cli add -d "task 1"
+1771191035191:add -d "task 1"
+1771191087048:exit
+1771191309206:task-cli add -d "task 1"
+1771191329951:task-cli add --description "task 2"
+1771191333563:exit
+1771191977754:task-cli list
+1771191996801:task-cli add -d "buy a car"
+1771192004537:task-cli list
+1771192712578:exit
+1771192751401:task-cli update 2 "task atualizada"
+1771192765450:task-cli list
+1771192786409:exit
+1771194581401:task-cli update 3 "task changed"
+1771194588669:task-cli list
+1771194600033:exit
+1771194840933:task-cli mark-in-progress 2
+1771194850939:task-cli list
+1771194879893:exit
+1771194941931:task-cli mark-in-progress 2
+1771194954142:task-cli list
+1771195013500:exit
+1771195200386:task-cli mark-done 3
+1771195206709:task-cli list
+1771195212241:exit
+1771195415159:task-cli add -d "new task"
+1771195424914:task-cli list todo
+1771195443799:task-cli list done
+1771195465904:exit
+1771195486414:task-cli list todo
+1771195493645:task-cli list in-progress
+1771195499954:task-cli list done
+1771195502447:exit

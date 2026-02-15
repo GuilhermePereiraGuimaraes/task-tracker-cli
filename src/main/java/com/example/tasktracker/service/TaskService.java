@@ -26,13 +26,13 @@ public class TaskService {
 
 	public TaskDTO create(CreateTaskDTO dto) {
 		Task task = mapper.toEntity(dto);
-		repository.save(task);
+		task = repository.save(task);
 		return mapper.toDTO(task);
 	}
 	
-	public void update(UpdateTaskDTO dto, Long id) {
+	public void update(String description, Long id) {
 		Task task = repository.findById(id).orElseThrow(()-> new TaskNotFoundException());
-		mapper.updateEntityFromDTO(dto, task);
+		task.setDescription(description);
 		
 		repository.save(task);
 	}
@@ -45,11 +45,15 @@ public class TaskService {
 	public void markInProgress(Long id) {
 		Task task = repository.findById(id).orElseThrow(()-> new TaskNotFoundException());
 		task.setStatus(Status.IN_PROGRESS);
+		
+		repository.save(task);
 	}
 	
 	public void markDone(Long id) {
 		Task task = repository.findById(id).orElseThrow(()-> new TaskNotFoundException());
 		task.setStatus(Status.DONE);
+		
+		repository.save(task);
 	}
 	
 	public List<TaskDTO> listAll(){

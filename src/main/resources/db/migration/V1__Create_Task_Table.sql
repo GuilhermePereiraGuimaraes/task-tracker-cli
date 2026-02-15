@@ -1,4 +1,4 @@
-CREATE TABLE things.task (
+CREATE TABLE public.task (
     id BIGSERIAL PRIMARY KEY,
     description TEXT NOT NULL,
     status VARCHAR(20) NOT NULL

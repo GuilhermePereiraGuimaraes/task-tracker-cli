@@ -1,10 +1,15 @@
 spring:
+  main:
+   web-application-type: none
+  shell:
+   interactive:
+    enabled: true	
   application:
     name: tasktracker
   datasource:
-    url: jdbc:postgresql://localhost:5432/postgres
+    url: jdbc:postgresql://localhost:5433/tasktracker
     username: postgres
-    password: postgresql123
+    password: postgres
   jpa:
     hibernate:
       ddl-auto: update

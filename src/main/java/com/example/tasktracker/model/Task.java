@@ -40,6 +40,7 @@ public class Task {
 	protected void onCreate() {
 		OffsetDateTime now = OffsetDateTime.now();
 		this.createdAt = now;
+		this.updatedAt = now;
 	}
 	
 	@PreUpdate

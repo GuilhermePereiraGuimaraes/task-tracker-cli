@@ -1,0 +1,11 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: tasktracker-postgres
+    restart: always
+    environment:
+      POSTGRES_DB: tasktracker
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"
